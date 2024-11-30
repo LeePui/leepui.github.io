@@ -9,6 +9,9 @@ layout: default
 <!-- Post Header -->
 {% include intro-header.html type='post' %}
 
+<!-- 添加 medium-zoom CDN -->
+<script src="https://unpkg.com/medium-zoom/dist/medium-zoom.min.js"></script>
+
 <!-- Post Content -->
 <article>
     <div class="container">
@@ -171,3 +174,13 @@ layout: default
     }
 </style>
 {% endif %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        mediumZoom('article img:not(.no-zoom)', {
+            margin: 24,
+            background: 'rgba(0,0,0,0.8)',
+            scrollOffset: 0,
+        });
+    });
+</script>
