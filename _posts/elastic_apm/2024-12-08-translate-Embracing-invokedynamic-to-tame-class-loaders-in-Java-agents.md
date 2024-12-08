@@ -53,7 +53,7 @@ public static void exit(
 ```
 在 Byte Buddy 中，advice 应用到被插桩方法的方式主要有两种。
   
-## 内联 advice (inlint advice)
+## 内联 advice (inline advice)
 默认情况下，enter 和 exit 的 advice 会被复制到目标方法中，就像原始类的作者将代理的代码直接添加到方法中一样。如果被插桩的方法是用普通的 Java 编写的，那么它看起来可能是这样的：
 ```java
 protected void service(HttpServletRequest req, HttpServletResponse resp) {
